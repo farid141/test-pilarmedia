@@ -38,8 +38,12 @@
     <!-- Load the Latest Bootstrap Icons -->
     <link href="/assets/vendors/JqueryIconpicker/css/bootstrapicons-iconpicker.css" rel="stylesheet" />
 
+    <link href="/assets/extensions/flatpickr/flatpickr.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/darkmode-select2.css">
     <link rel="stylesheet" href="css/darkmode-iconpicker.css">
+
+
     @stack('styles')
 </head>
 
@@ -89,6 +93,7 @@
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
     <script src="/assets/vendors/JqueryIconpicker/js/bootstrapicon-iconpicker.js"></script>
+    <script src="/assets/extensions/flatpickr/flatpickr.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
@@ -136,7 +141,7 @@
 
         function displayErrorMessages(errors, formElement, formName) {
             $.each(errors, function(key, value) {
-                // add is-invalid class to the corresponsing element 
+                // add is-invalid class to the corresponsing element
                 var input = formElement.find(`[id="${formName}-${key}"]`);
                 input.addClass('is-invalid');
 
